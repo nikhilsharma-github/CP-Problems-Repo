@@ -25,6 +25,7 @@ int main()
         // cout << " Naive solution : " << endl;
         int m = INT_MIN, sm = INT_MIN, indexm = -1, indexsm = -1;
         // // cout<<m<<endl;
+        
         // for (int i = 0; i < n; i++)
         // {
         //     if (a[i] > m)
