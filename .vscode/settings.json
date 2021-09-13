@@ -19,6 +19,7 @@
         "system_error": "cpp",
         "xlocmon": "cpp",
         "xtr1common": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "iostream": "cpp"
     }
 }
