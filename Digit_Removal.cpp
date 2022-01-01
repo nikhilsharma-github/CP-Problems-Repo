@@ -59,9 +59,9 @@ void parray(int a[], int n)
 long long dr(long long n,long long ntemp, long long d, long long pow)
 {
 
-    cout << "found " << d << " at position " << (pow/10)+1 <<" for power "<<pow<< endl;
+    // cout << "found " << d << " at position " << (pow/10)+1 <<" for power "<<pow<< endl;
     long long part=n%pow;
-    cout<<"last digit part of given no: "<<part<<endl;
+    // cout<<"last digit part of given no: "<<part<<endl;
 
 
     return pow-part;
@@ -76,56 +76,99 @@ int main()
     cin >> test;
     while (test--)
     {
-        cout<<endl;
-        cout << "TEST CASE : " << test + 1 << endl;
+        // cout<<endl;
+        // cout << "TEST CASE : " << test + 1 << endl;
         long long n, d, ntemp, sum = 0,dectemp=0;
         cin >> n >> d;
-        cout<<" N: "<<n<<"  D : "<<d<<endl;
-        ntemp = n;
-        dectemp=n;
+        // cout<<" N: "<<n<<"  D : "<<d<<endl;
+        // ntemp = n;
+        // dectemp=n;
         
-         int lastcheck=-1;
-        bool addition=true;
-        int pow = 1;
-        while (ntemp)
-        {
 
-            int lastdigit = ntemp % 10;
+        // OLDCODE 
+        //  int lastcheck=-1;
+        // bool addition=true;
+        // int pow = 1;
+        // while (ntemp)
+        // {
 
-                cout<<"Currently n is : "<<n<<endl;
-                int lastcheck=n%10;
-            if (lastdigit == d)
-            {
-                addition=false;
+        //     int lastdigit = ntemp % 10;
 
-                cout<<"Last digit is : "<<d<<endl;
-                 int pval=dr(n,ntemp,d,pow);
+        //         // cout<<"Currently n is : "<<n<<endl;
+        //         int lastcheck=n%10;
+        //     if (lastdigit == d)
+        //     {
+        //         addition=false;
+
+        //         // cout<<"Last digit is : "<<d<<endl;
+        //          int pval=dr(n,ntemp,d,pow);
                   
-                  dectemp=dectemp+pval;
-                  n=dectemp;
-                  if(lastcheck==d&&n>10){
-                   cout<<"Last digit was "<<d<<" so incremented result "<<endl;
-                  pval++;
-                  }
+        //           dectemp=dectemp+pval;
+        //           n=dectemp;
+        //           if(lastcheck==d&&n>10){
+        //         //    cout<<"Last digit was "<<d<<" so incremented result "<<endl;
+        //           pval++;
+        //           }
 
 
-                 cout<<"ADD "<<pval<<" to remove "<<d<<endl;
-                 sum = sum + pval;
-                 cout<<"SUM VAL at Present : "<<sum<<endl;
-                cout<<"Currently n is : "<<n<<endl;
+        //         //  cout<<"ADD "<<pval<<" to remove "<<d<<endl;
+        //          sum = sum + pval;
+        //         //  cout<<"SUM VAL at Present : "<<sum<<endl;
+        //         // cout<<"Currently n is : "<<n<<endl;
+        //     }
+        //     ntemp = ntemp / 10;
+
+        //     pow = pow * 10;
+        // }
+
+        // if(addition==true){
+        // cout<<"0"<<endl;
+        // }
+        // else{
+
+        //     // cout<<"FINal ans : "<<sum<<endl;
+        //     cout<<sum<<endl;
+        // }
+
+
+
+            //  NEWCODE 
+
+
+    //    intialization of variables 
+            int newval=n;
+            int remainder=0;
+            int finalAns=0;
+            int carry=0;
+
+
+            while(newval>0){
+
+                    // getting remainder 
+                remainder=newval%10;
+                newval=newval/10;
+
+                carry++;
+
+                if(remainder==d){
+
+                             //    long long int val1=newval*pow(10,carry);
+                            //   long long int val2=(remainder+1)*pow(10,carry-1);
+                            //   newval=val1+val2;
+
+                            
+
+                              newval=newval*pow(10,carry)+(remainder+1)*pow(10,carry-1);
+                  
+                              finalAns=newval-n;
+                              carry=0;
+                }
             }
-            ntemp = ntemp / 10;
+            // printing final ans
+            cout<<finalAns<<endl;
 
-            pow = pow * 10;
-        }
+            // end of code 
 
-        if(addition==true){
-        cout<<"0"<<endl;
-        }
-        else{
-
-            cout<<"FINal ans : "<<sum<<endl;
-        }
     }
     return 0;
 }
