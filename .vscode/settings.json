@@ -1,25 +1,54 @@
 {
-    "files.associations": {
-        "vector": "cpp",
-        "initializer_list": "cpp",
-        "xstring": "cpp",
-        "xutility": "cpp",
-        "ostream": "cpp",
-        "queue": "cpp",
-        "stack": "cpp",
-        "bitset": "cpp",
-        "random": "cpp",
-        "xiosbase": "cpp",
-        "chrono": "cpp",
-        "xhash": "cpp",
-        "xtree": "cpp",
-        "functional": "cpp",
-        "optional": "cpp",
-        "regex": "cpp",
-        "system_error": "cpp",
-        "xlocmon": "cpp",
-        "xtr1common": "cpp",
-        "future": "cpp",
-        "iostream": "cpp"
-    }
+  "files.associations": {
+    "vector": "cpp",
+    "initializer_list": "cpp",
+    "xstring": "cpp",
+    "xutility": "cpp",
+    "ostream": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "bitset": "cpp",
+    "random": "cpp",
+    "xiosbase": "cpp",
+    "chrono": "cpp",
+    "xhash": "cpp",
+    "xtree": "cpp",
+    "functional": "cpp",
+    "optional": "cpp",
+    "regex": "cpp",
+    "system_error": "cpp",
+    "xlocmon": "cpp",
+    "xtr1common": "cpp",
+    "future": "cpp",
+    "iostream": "cpp",
+    "cmath": "cpp"
+  },
+  "C_Cpp_Runner.cCompilerPath": "C:/MinGW/bin/gcc.exe",
+  "C_Cpp_Runner.cppCompilerPath": "C:/MinGW/bin/g++.exe",
+  "C_Cpp_Runner.debuggerPath": "gdb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ]
 }

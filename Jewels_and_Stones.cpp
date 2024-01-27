@@ -4,23 +4,42 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    long long test;
-    cin >> test;
-    while (test--)
-    {
-        string s, c;
-        cin >> s >> c;
-        sort(s.begin(), s.end());
-        sort(c.begin(), c.end());
-        int count = 0,countk=0,res=0,m=0, s1 = s.size(), s2 = c.size();
-         m=max(s1,s2);
-        while(count<m){
-               if(s[count])
+    long long n;
+    cin>>n;
 
+    vector<int> v;
+
+    while(n>10){
+        int d=n%10;
+
+        if(9-d<5)
+        {
+            v.push_back(9-d);
         }
-        // cout<<s<<endl;
-        // cout<<c<<endl;
-        while ()
+        else{
+            v.push_back(d);
+        }
+        n=n/10;
     }
+
+    int ld=n%10;
+    if(9-ld<5)
+        {
+            if(9-ld==0)
+            v.push_back(1);
+            else
+            v.push_back(9-ld);
+        }
+        else{
+            v.push_back(ld);
+        }
+
+    reverse(v.begin(),v.end());
+
+    for(int r:v)
+    cout<<r;
+    cout<<endl;
+
+
     return 0;
 }
